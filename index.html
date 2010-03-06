@@ -14,6 +14,9 @@
 		<title>Glider - JavaScript content glider</title>
     <link rel="shortcut icon" type="image/x-icon" href="http://simplabs.com/simplabs.ico" />
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+		<script type="text/javascript" src="javascripts/prototype.js"></script>
+		<script type="text/javascript" src="javascripts/scriptaculous.js"></script>
+		<script type="text/javascript" src="javascripts/glider.js"></script>
 		<style type="text/css" media="screen">
 		  /******************************************************************************
           GENERAL STYLES
@@ -161,6 +164,40 @@
 				display: none;
 			}
 
+
+			/******************************************************************************
+          EXAMPLE
+       ******************************************************************************/
+
+			div#example {
+		    background-color: #eee;
+				width: 300px;
+				overflow: hidden;
+				position: relative;
+				margin: auto auto 15px auto;
+      }
+
+			div#example div.sections {
+				width: 1000px;
+			}
+
+      div#example div.section {
+      	width: 260px;
+				padding: 20px;
+				float: left;
+      }
+
+			ul#exampleMenu {
+				list-style-type: none;
+				margin: auto auto;
+				padding: 0px;
+				text-align: center;
+			}
+
+			ul#exampleMenu li {
+				display: inline;
+			}
+
 		</style>
   </head>
   <body>
@@ -184,7 +221,35 @@
 							</div>
 							<div class="section">
 								<h3>Example</h3>
-								As an example, simply checkout how the navigation on <a href="http://simplabs.com" title="simplabs.com uses glider">http://simplabs.com</a> works.
+								<ul id="exampleMenu">
+						      <li><a href="#exampleSection1" id="menu-exampleSection1">Section 1</a></li>
+						      <li><a href="#exampleSection2" id="menu-exampleSection2">Section 2</a></li>
+						      <li><a href="#exampleSection3" id="menu-exampleSection3">Section 3</a></li>
+						    </ul>
+								<div id="example">
+									<div class="sections">
+										<div class="section" id="exampleSection1">
+											This is the <strong>1st</strong> content section.
+										</div>
+										<div class="section" id="exampleSection2">
+											This is the <strong>2nd</strong> content section.
+										</div>
+										<div class="section" id="exampleSection3">
+											This is the <strong>3rd</strong> content section.
+										</div>
+									</div>
+								</div>
+								<script type="text/javascript" charset="utf-8">
+									document.observe('dom:loaded', function() {
+										var glider = new Glider($('example'));
+									  $$('a[href^="#"]').each(function(link) {
+									  	link = new GliderLink(link, glider);
+									  });
+									});
+								</script>
+								<p>
+									Also checkout how the navigation on <a href="http://simplabs.com" title="simplabs.com uses glider">http://simplabs.com</a> works.
+								</p>
 							</div>
 							<div class="section">
 								<h3>Installation</h3>
