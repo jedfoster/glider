@@ -1,0 +1,330 @@
+/******************************************************************************
+    GENERAL STYLES
+ ******************************************************************************/
+
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+  font-size: 1em;
+  line-height: 150%;
+  background-color: #eee;
+  color: #000;
+}
+
+a {
+  color: #000;
+  background-color: #ddd;
+  text-decoration: none;
+  padding: 0 2px 0 2px;
+}
+
+a:active, a:hover {
+  color: #fff;
+  background-color: #222;
+}
+
+a.important {
+  font-size: 125%;
+}
+
+a.veryImportant {
+  font-size: 160%;
+}
+
+a.superImportant {
+  font-size: 250%;
+}
+
+strong {
+  background-color: #fffebb;
+  padding: 0 2px 0 2px;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: inline;
+  padding: 3px 0;
+}
+
+
+/******************************************************************************
+    REUSED STYLES
+ ******************************************************************************/
+
+div.blocker {
+	font-size: 1px;
+	clear: both;
+	height: 0;
+}
+
+
+/******************************************************************************
+    HEAD SECTION
+ ******************************************************************************/
+
+div#head {
+  display: none;
+}
+
+#logLogo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: none;
+}
+
+
+/******************************************************************************
+    MAIN CONTENT SECTION
+ ******************************************************************************/
+
+div#content {
+	margin: 7em auto 0 auto;
+	width: 600px;
+	font-size: 100%;
+	background-color: #fff;
+}
+
+div#contentHead {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+div#contentHead h2 {
+	height: 10px;
+	overflow: hidden;
+	padding: 0;
+  margin: 0;
+}
+
+div#contentHead h2 span {
+  display: block;
+  margin: 30px;
+}
+
+div#contentBody {
+	margin: 0;
+	width: 600px;
+}
+
+div#footer {
+  margin: 0 auto;
+	width: 50em;
+}
+
+
+/******************************************************************************
+    CONTENT AND CONTENT STRUCTURE
+ ******************************************************************************/
+
+div.logo {
+  text-align: center;
+  padding: 20px 0 10px 0;
+  z-index: 2;
+  position: relative;
+}
+
+div.logo img {
+  margin: 10px;
+  border: none;
+}
+
+div.logo a {
+  background: none;
+}
+
+div.section p {
+  text-align: justify;
+}
+
+
+
+/******************************************************************************
+    SECTIONS
+ ******************************************************************************/
+
+div#mainContent {
+  overflow: hidden;
+  position: relative;
+}
+
+div.sections div.section {
+	z-index: 1;
+	position: relative;
+	width: 560px;
+	padding: 20px;
+}
+
+div.section p {
+  margin: 0 0 15px 0;
+}
+
+div.section h3 {
+  margin: 20px 0 5px 0;
+}
+
+div.section h3 a.get, div.section h3 a.bugs {
+  font-size: 65%;
+}
+
+
+/******************************************************************************
+    MENU
+ ******************************************************************************/
+
+ul.menu {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  background-color: #ddd;
+  margin: 10px 0 0 0;
+  padding: 15px;
+  z-index: 2;
+  position: relative;
+}
+
+ul.menu li {
+  display: inline;
+  margin: 0 5px 0 5px;
+}
+
+ul.menu li a {
+  display: inline-block;
+  background-color: #bbb;
+  text-decoration: none;
+  padding: 5px 8px;
+  margin: -5px 0 -5px 0;
+  font-weight: bold;
+}
+
+ul.menu li a:hover, ul.menu li a.active, ul.menu li a:active {
+  color: #fff;
+  background-color: #222;
+}
+
+
+/******************************************************************************
+    FOOTER/ IMPRINT
+ ******************************************************************************/
+
+div#footer {
+  padding: 20px;
+ 	text-align: center;
+ 	width: 500px;
+}
+
+a#imprintLink, a#imprintLink:hover {
+ 	font-size: .7em;
+ 	text-decoration: none;
+ 	background: transparent;
+ 	color: #000;
+}
+
+div#imprint {
+  text-align: justify;
+  margin: 20px 0 0 0;
+  background-color: #fff;
+  padding: 20px;
+}
+
+div#imprint h3 {
+  font-size: .9em;
+}
+
+div#imprint h4 {
+  font-size: .8em;
+}
+
+div#imprint h3, div#imprint h4 {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+div#imprint p {
+  font-size: .8em;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+div#imprint address {
+  font-size: .8em;
+  margin: -10px 0 10px 0;
+  padding: 0;
+}
+
+
+/******************************************************************************
+    FORMS
+ ******************************************************************************/
+
+form legend {
+  display: none;
+}
+
+form fieldset {
+  border: none;
+  padding: 10px 0 0 0;
+}
+
+form fieldset div {
+  position: relative;
+}
+
+form fieldset label {
+  display: block;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+form fieldset label span.hint {
+  color: #999;
+}
+
+form fieldset input, form fieldset textarea {
+  font-weight: bold;
+  width: 350px;
+  margin: 0 0 10px 0;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+  font-size: .9em;
+}
+
+form fieldset textarea {
+  height: 150px;
+  padding: 2px;
+}
+
+form fieldset input.submit {
+  border:none;
+  width: auto;
+  background: #222;
+  display: inline-block;
+  padding: 5px 10px 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 0 -1px 1px #222;
+  border-bottom: 1px solid #222;
+  position: relative;
+  cursor: default;
+}
+
+form fieldset div.formError {
+	position: absolute;
+	background-color: #c00;
+	color: #fff;
+	font-size: .7em;
+	font-weight: bold;
+	padding: 5px;
+	cursor: pointer;
+	left: 360px;
+	top: 20px;
+	width: 180px;
+	line-height: 130%;
+}

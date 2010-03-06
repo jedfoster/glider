@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+		<meta http-equiv="content-style-type" content="text/css"/>
+		<meta http-equiv="content-script-type" content="text/javascript"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="description" content="Glider - JavaScript content glider" />
+  	<meta name="keywords" content="javascript, slider, glider, prototype, scriptaculous" />
+		<meta name="language" content="en"/>
+		<meta name="content-language" content="en"/>
+		<meta name="publisher" content="Marco Otte-Witte" />
+		<meta name="author" content="Marco Otte-Witte - http://simplabs.com" />
+		<title>Glider - JavaScript content glider</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://simplabs.com/simplabs.ico" />
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+		<style type="text/css" media="screen">
+		  /******************************************************************************
+          GENERAL STYLES
+       ******************************************************************************/
+
+      body {
+        font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+        line-height: 150%;
+        background-color: #eee;
+        color: #000;
+      }
+
+      a {
+        color: #000;
+        background-color: #ddd;
+        text-decoration: none;
+        padding: 0 2px 0 2px;
+      }
+
+      a:active, a:hover, a.active {
+        color: #fff;
+        background-color: #222;
+      }
+      
+      h3 a, h3 a:active, h3 a:hover, h4 a, h4 a:active, h4 a:hover {
+        color: #000;
+        background-color: #fff;
+        text-decoration: none;
+      }
+
+      strong {
+        background-color: #fffebb;
+        padding: 0 2px 0 2px;
+        font-weight: normal;
+      }
+      
+      h3 {
+        margin: 0 0 30px 0;
+        padding: 0 0 5px 0;
+        font-size: 1.7em;
+      }
+
+			pre {
+				line-height: 120%;
+			}
+
+
+      /******************************************************************************
+          REUSED STYLES
+       ******************************************************************************/
+
+      div.blocker {
+      	font-size: 1px;
+      	clear: both;
+      	height: 0;
+      }
+
+
+      /******************************************************************************
+          MAIN CONTENT SECTION
+       ******************************************************************************/
+
+      div#content {
+      	margin: 7em auto 2em auto;
+      	width: 600px;
+      	font-size: 100%;
+      	background-color: #fff;
+      }
+
+      div#contentHead {
+      	margin: 0;
+      	padding: 0;
+      	text-align: center;
+      }
+
+      div#contentHead h2 {
+      	height: 10px;
+      	overflow: hidden;
+      	padding: 0;
+        margin: 0;
+      }
+
+      div#contentHead h2 span {
+        display: block;
+        margin: 30px;
+      }
+
+      div#contentBody {
+      	margin: 0;
+      	width: 600px;
+      }
+      
+      
+      /******************************************************************************
+          CONTENT AND CONTENT STRUCTURE
+       ******************************************************************************/
+
+      div.logo {
+        text-align: center;
+        padding: 20px 0 10px 0;
+        z-index: 2;
+        position: relative;
+      }
+
+      div.logo img {
+        margin: 10px;
+        border: none;
+      }
+
+      div.logo a {
+        background: none;
+      }
+      
+      div.section p {
+        text-align: justify;
+      }
+
+
+      /******************************************************************************
+          SECTIONS
+       ******************************************************************************/
+
+      div#mainContent {
+        overflow: hidden;
+        position: relative;
+      }
+
+      div.sections div.section {
+      	z-index: 1;
+      	position: relative;
+      	width: 560px;
+      	padding: 20px;
+      }
+
+      div.section p {
+        margin: 0 0 15px 0;
+      }
+
+      div.section h4 {
+        margin: 0 0 5px 0;
+        font-size: 1.3em;
+      }
+
+			.gist-meta {
+				display: none;
+			}
+
+		</style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="content">
+        <div id="contentHead">
+          <h2><span>simple web Engineering</span></h2>
+        </div>
+        <div id="contentBody">
+          <div class="logo">
+            <a href="http://simplabs.com" title="simplabs.com - home"><img src="http://simplabs.com/images/header-logo.png" alt="Logo simplabs.com" title="Simplabs" /></a>
+            <div class="blocker">&nbsp;</div>
+          </div>
+          <div id="mainContent">
+            <div class="sections">
+              <div class="section">
+								<h3>JavaScript content glider</h3>
+								<p>
+									<a href="http://github.com/simplabs/glider" title="Glider @ github">Glider</a> <strong>slides content horizontally or vertically</strong> inside a containing div. It is based on <a href="http://prototypejs.org/" title="Prototype.js JavaScript framework">Prototype.js</a> and <a href="http://script.aculo.us/" title="script.aculo.us - web 2.0 JavaScript">script.aculo.us</a>.
+								</p>
+							</div>
+							<div class="section">
+								<h3>Example</h3>
+								As an example, simply checkout how the navigation on <a href="http://simplabs.com" title="simplabs.com uses glider">http://simplabs.com</a> works.
+							</div>
+							<div class="section">
+								<h3>Installation</h3>
+								<p>
+									Glider is available from github: <a href="http://github.com/simplabs/glider" title="Glider @ github">http://github.com/simplabs/glider</a>.
+								</p>
+							</div>
+							<div class="section">
+								<h3>Get involved!</h3>
+								<p>
+									You can also <a href="http://github.com/simplabs/glider" title="Glider's repo @ github">fork Glider on github</a>.
+								</p>
+							</div>
+							<div class="section">
+								<h3>Copyright/ Acknowledgement</h3>
+								<p>
+									Glider is developed by and &copy; <a href="http://simplabs.com" title="simplabs">Marco Otte-Witte</a>. It is released under the <a href="http://github.com/simplabs/glider/blob/master/MIT-LICENSE" title="Glider's license">MIT License</a>.
+								</p>
+							</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
