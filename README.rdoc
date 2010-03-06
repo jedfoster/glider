@@ -1,0 +1,54 @@
+= Glider
+
+Glider is a Javascript glider control, based on script.aculo.us. It lets <b>content glide in and out
+of a surrounding div in either horizontal or vertical direction</b>.
+
+
+== Usage
+
+Just <b>include glider.js in your page and initialize the glider</b> with
+
+  glider = new Glider($('glider'));
+
+You can also specify the direction and parameters for the animation as well as a callback that will be invoked when the glider glides:
+
+  glider = new Glider($('glider', { direction: 'x', transition: Effect.Transitions.sinoidal, duration: .6 }, myCallBackFunction));
+
+The glider's direction defaults to horizontal (x). Additionally to the <tt>Glider</tt> class, there is the <tt>GliderLink</tt> class. Just
+instantiate a new <tt>GliderLink</tt> for all links on the page that are supposed to trigger the glider to show a section, e.g.:
+
+  $$('a[href^="#"]').each(function(link) {
+    link = new GliderLink(link, glider);
+  });
+
+Setup of the HTML required for the glider to work is pretty straight forward. You need a surrounding div, a div that
+marks the list of sections and one div for each section:
+
+  <div id="glider">
+    <div class="sections">
+      <div id="section1" class="section">
+        section1
+      </div>
+      <div id="section2" class="section">
+        section2
+      </div>
+      <div id="section3" class="section">
+        section3
+      </div>
+    </div>
+  </div>
+
+<b>The ids of these sections have to correspond to the <tt>GliderLink</tt>s' hrefs</b>, e.g. a link with <tt>href="#section1"</tt> triggers the glider to glide <tt>div#section1</tt> into view.
+
+<tt>Glider</tt> will also resize the surrounding container to match the current section's width or height respectively. To disable that scaling, simply specify a fixed width and/or height for all sections.
+
+<b>For guidance on the required CSS, see the examples</b>
+
+
+== TODOs/ future plans
+
+At the moment there are neither TODOs nor future plans. If you want ot suggest any, do so at http://github.com/simplabs/glider.
+
+== Author
+
+Copyright (c) 2008-2010 Marco Otte-Witte (http://simplabs.com), released under the MIT license

@@ -1,0 +1,12 @@
+=== v1.1
+
+* added Glider#showNextSection() and Glider#showPreviousSection() as well as Glider#atFirstSection() and Glider#atLastSection()
+* renamed Glider#show() to Glider#showSection()
+* updated examples
+* added some tests
+* updated documentation
+
+
+=== prior to v1.1
+
+* cannot remember, should habe started a history file right from the beginning...

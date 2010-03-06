@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+  <head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+		<meta http-equiv="content-style-type" content="text/css"/>
+		<meta http-equiv="content-script-type" content="text/javascript"/>
+		<meta name="language" content="en"/>
+		<meta name="content-language" content="en"/>
+		<meta name="publisher" content="Marco Otte-Witte" />
+		<meta name="author" content="Marco Otte-Witte - http://simplabs.com" />
+		<title>Glider - horizontal example</title>
+		<script type="text/javascript" src="../lib/prototype.js"></script>
+		<script type="text/javascript" src="../lib/scriptaculous.js"></script>
+		<script type="text/javascript" src="../dist/glider.js"></script>
+		<style type="text/css" media="screen">
+		  body {
+		    background-color: #ddd;
+				font-family: sans-serif;
+		  }
+		
+		  ul li {
+		    display: inline;
+		  }
+		  
+		  ul li a {
+		    color: #000;
+		  }
+		
+		  div#glider {
+		    background-color: white;
+				width: 300px;
+				overflow: hidden;
+				position: relative;
+      }
+
+			div#glider div.sections {
+				width: 1000px;
+			}
+
+      div#glider div.section {
+      	width: 260px;
+				padding: 20px;
+				float: left;
+      }
+		</style>
+		<script type="text/javascript" charset="utf-8">
+      document.observe('dom:loaded', function() {
+        var glider = new Glider($('glider'));
+        $$('a[href^="#"]').each(function(link) {
+          link = new GliderLink(link, glider);
+        });
+      });
+    </script>
+	</head>
+	<body>
+    <ul>
+      <li><a href="#section1" id="menu-section1">Section 1</a></li>
+      <li><a href="#section2" id="menu-section2">Section 2</a></li>
+      <li><a href="#section3" id="menu-section3">Section 3</a></li>
+    </ul>
+    <div id="glider">
+      <div class="sections">
+        <div id="section1" class="section">
+          <h2>This is section 1!</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisci elit. Nunc ac ante sed ante imperdiet auctor. Fusce dignissim, magna eu feugiat tincidunt, nibh metus tincidunt augue, quis ullamcorper lorem pede a ante. Proin congue nisl a arcu. Donec et elit. Etiam ac eros nec metus molestie aliquam. Nullam vestibulum molestie magna. In varius quam in nulla luctus tristique. Nam et eros. Sed vitae sem a velit mattis dapibus. Sed blandit, sapien auctor adipiscing viverra, purus urna fermentum wisi, id luctus tortor augue et ligula. In quis libero. Sed urna arcu, malesuada in, adipiscing vitae, vehicula vitae, magna. Phasellus sit amet nisl at erat aliquet eleifend. Quisque malesuada porta elit. Nulla nec orci ac leo posuere eleifend. Aliquam ultrices vulputate velit. Vestibulum vitae ipsum. Vestibulum pede erat, cursus nec, porttitor ac, accumsan ut, neque.</p>
+        </div>
+        <div id="section2" class="section">
+          <h2>This is section 2!</h2>
+          <p>Aenean vel mi. Donec blandit mauris convallis lacus. Sed a urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus hendrerit. Curabitur libero leo, laoreet nec, lobortis in, auctor malesuada, metus. Vivamus ultrices eros eget pede. Morbi facilisis leo ut elit. Fusce viverra iaculis risus. Pellentesque posuere faucibus sem. Praesent et felis ac lorem laoreet venenatis.</p>
+        </div>
+        <div id="section3" class="section">
+          <h2>This is section 3!</h2>
+          <p>Etiam pede. Sed et orci quis nulla condimentum suscipit. Fusce quam lectus, tincidunt quis, gravida vel, interdum non, quam. Phasellus nibh pede, rhoncus id, bibendum non, eleifend sit amet, dui. Integer non nibh quis magna elementum condimentum. Etiam varius iaculis nunc. Curabitur et metus in lectus malesuada venenatis. Aliquam erat volutpat. Aliquam sit amet ligula ut eros consequat laoreet. Ut accumsan, urna eu ullamcorper fermentum, ipsum nunc aliquam odio, lobortis interdum sem leo sed metus. Nam quis purus a est luctus laoreet. Nulla bibendum. Sed non pede non quam dictum eleifend.</p>
+        </div>
+      </div>
+    </div>
+	</body>
+</html>
