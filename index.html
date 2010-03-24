@@ -23,23 +23,26 @@
        ******************************************************************************/
 
       body {
-        font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
-        line-height: 150%;
-        background-color: #eee;
-        color: #000;
-      }
+			 font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+			 font-size: 1em;
+			 line-height: 150%;
+			 background-color: #eee;
+			 color: #000;
+			}
 
-      a {
-        color: #000;
-        background-color: #ddd;
-        text-decoration: none;
-        padding: 0 2px 0 2px;
-      }
+			a {
+			 color: #000;
+			 background-color: #ddd;
+			 text-decoration: none;
+			 padding: 2px;
+			 -moz-border-radius: 2px;
+			 -webkit-border-radius: 2px;
+			}
 
-      a:active, a:hover, a.active {
-        color: #fff;
-        background-color: #222;
-      }
+			a:active, a:hover {
+			 color: #fff;
+			 background-color: #0480c1;
+			}
       
       h3 a, h3 a:active, h3 a:hover, h4 a, h4 a:active, h4 a:hover {
         color: #000;
@@ -48,10 +51,12 @@
       }
 
       strong {
-        background-color: #fffebb;
-        padding: 0 2px 0 2px;
-        font-weight: normal;
-      }
+			  background-color: #fffebb;
+			  font-weight: normal;
+			  padding: 2px;
+			  -moz-border-radius: 2px;
+			  -webkit-border-radius: 2px;
+			}
       
       h3 {
         margin: 0 0 30px 0;
@@ -80,11 +85,15 @@
        ******************************************************************************/
 
       div#content {
-      	margin: 7em auto 2em auto;
-      	width: 600px;
-      	font-size: 100%;
-      	background-color: #fff;
-      }
+				margin: 7em auto 2em auto;
+				width: 600px;
+				font-size: 100%;
+				background-color: #fff;
+				-moz-border-radius: 3px;
+			  -webkit-border-radius: 3px;
+			  -moz-box-shadow: 0 2px 2px rgba(100, 100, 100, 0.5);
+			  -webkit-box-shadow: 0 2px 2px rgba(100, 100, 100, 0.5);
+			}
 
       div#contentHead {
       	margin: 0;
@@ -162,40 +171,6 @@
 
 			.gist-meta {
 				display: none;
-			}
-
-
-			/******************************************************************************
-          EXAMPLE
-       ******************************************************************************/
-
-			div#example {
-		    background-color: #eee;
-				width: 300px;
-				overflow: hidden;
-				position: relative;
-				margin: auto auto 15px auto;
-      }
-
-			div#example div.sections {
-				width: 1000px;
-			}
-
-      div#example div.section {
-      	width: 260px;
-				padding: 20px;
-				float: left;
-      }
-
-			ul#exampleMenu {
-				list-style-type: none;
-				margin: auto auto;
-				padding: 0px;
-				text-align: center;
-			}
-
-			ul#exampleMenu li {
-				display: inline;
 			}
 
 		</style>
